@@ -380,5 +380,5 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    console.log('🎨 La Profe Yeca - Sitio cargado correctamente');
+    console.log('🎨 Mundo Juanpi - Sitio cargado correctamente');
 });
