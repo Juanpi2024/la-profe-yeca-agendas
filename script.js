@@ -380,5 +380,34 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
+    // =====================================================
+    // PREMIUM WHATSAPP WIDGET LOGIC
+    // =====================================================
+    const waWidget = document.querySelector('.wa-widget-container');
+    const waBubble = document.querySelector('.wa-bubble');
+    const waFab = document.querySelector('.wa-fab');
+
+    if (waWidget && waFab) {
+        // Show bubble after 4 seconds
+        setTimeout(() => {
+            if (!waWidget.classList.contains('active')) {
+                waBubble?.classList.add('show');
+            }
+        }, 4000);
+
+        // Toggle Widget
+        waFab.addEventListener('click', () => {
+            waWidget.classList.toggle('active');
+            const waWindow = document.querySelector('.wa-window');
+            waWindow?.classList.toggle('active');
+            waBubble?.classList.remove('show');
+        });
+
+        // Hide bubble on scroll
+        window.addEventListener('scroll', () => {
+            waBubble?.classList.remove('show');
+        }, { once: true });
+    }
+
     console.log('🎨 Mundo Juanpi - Sitio cargado correctamente');
 });
