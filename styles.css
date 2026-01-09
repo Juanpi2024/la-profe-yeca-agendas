@@ -4,20 +4,24 @@
    ===================================================== */
 
 :root {
-  /* Mundo Juanpi - Vibrant & Professional Palette */
+  /* Mundo Juanpi - Precise Flyer Palette */
   --primary: #FF85A2;
   /* Soft Pink */
   --primary-dark: #FF5C8D;
-  --primary-light: #FFB3C6;
+  --primary-light: #FFC2D1;
   --secondary: #7BD1ED;
   /* Sky Blue */
-  --secondary-dark: #4FB9DF;
+  --secondary-light: #BDE0FE;
   --accent: #FFD93D;
   /* Sun Gold */
-  --purple: #A29BFE;
-  /* Soft Purple */
+  --purple: #7B2CBF;
+  /* Vibrant Purple (From Flyer Title) */
+  --purple-light: #EBDEF0;
   --green: #55E6C1;
   /* Mint Green */
+  --green-light: #ADF7B6;
+  --yellow-light: #FFEE93;
+  --peach-light: #FFC09F;
 
   --cream: #FBFAF8;
   --cream-dark: #F1EFE9;
@@ -26,9 +30,9 @@
   --dark-light: #485460;
   --white: #FFFFFF;
 
-  /* Gradients */
+  /* Gradients - Refined from Flyer */
   --gradient-primary: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-  --gradient-soft: linear-gradient(135deg, #FFF0F3 0%, #E0F7FA 100%);
+  --gradient-soft: linear-gradient(135deg, var(--primary-light) 0%, var(--secondary-light) 100%);
   --gradient-award: linear-gradient(135deg, var(--accent) 0%, #F9CA24 100%);
   --gradient-dark: linear-gradient(135deg, var(--dark) 0%, #2F3542 100%);
 
@@ -235,9 +239,75 @@ img {
   max-width: 500px;
 }
 
-/* =====================================================
-   AWARDS & FUTURE SECTIONS
-   ===================================================== */
+/* Product Type Boxes (Flyer Inspired) */
+.product-types {
+  padding: 40px 0;
+  background: var(--white);
+}
+
+.product-types-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.product-type-card {
+  flex: 1;
+  min-width: 250px;
+  padding: 32px;
+  border-radius: var(--radius-lg);
+  text-align: center;
+  border: 6px solid var(--white);
+  box-shadow: var(--shadow-md);
+  transition: var(--transition-base);
+}
+
+.product-type-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+}
+
+.product-type-card.yellow {
+  background-color: var(--yellow-light);
+}
+
+.product-type-card.green {
+  background-color: var(--green-light);
+}
+
+.product-type-card.peach {
+  background-color: var(--peach-light);
+}
+
+.product-type-icon {
+  width: 70px;
+  height: 70px;
+  background: var(--white);
+  border-radius: 50%;
+  margin: 0 auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  box-shadow: var(--shadow-sm);
+}
+
+.product-type-card h3 {
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--dark);
+  margin-bottom: 8px;
+}
+
+.product-type-card p {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--purple);
+}
+
+/* Awards & Future Sections */
 .awards,
 .future {
   padding: var(--section-padding);
