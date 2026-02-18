@@ -402,6 +402,67 @@ img {
   margin-bottom: 20px;
 }
 
+/* Interior Gallery Grid */
+.interior-gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.interior-gallery .interior-img {
+  width: 100%;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  object-fit: cover;
+  aspect-ratio: 4/3;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.interior-gallery .interior-img:hover {
+  transform: scale(1.03);
+  box-shadow: var(--shadow-md);
+}
+
+.contents-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.contents-image {
+  position: sticky;
+  top: 100px;
+}
+
+.contents-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.content-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--white);
+  padding: 14px 20px;
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-sm);
+  flex: 1 1 calc(50% - 6px);
+  min-width: 200px;
+}
+
+.content-item-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.content-item-text {
+  font-weight: 500;
+  color: var(--dark);
+}
+
 /* =====================================================
    BUTTONS
    ===================================================== */
@@ -547,9 +608,7 @@ img {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(255, 255, 255, 0.98);
-    -webkit-backdrop-filter: blur(20px);
-    backdrop-filter: blur(20px);
+    background: #ffffff;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -608,6 +667,30 @@ img {
 
   .hero-buttons {
     justify-content: center;
+  }
+
+  /* Hide WhatsApp widget when mobile menu is open */
+  body.menu-open .wa-widget-container {
+    display: none !important;
+  }
+
+  /* Contenido page mobile layout */
+  .contents-wrapper {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .contents-image {
+    position: static;
+  }
+
+  .interior-gallery {
+    gap: 8px;
+  }
+
+  .content-item {
+    flex: 1 1 100%;
+    min-width: unset;
   }
 }
 

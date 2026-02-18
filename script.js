@@ -30,6 +30,7 @@ document.addEventListener('DOMContentLoaded', function () {
         menuToggle.addEventListener('click', function () {
             navLinks.classList.toggle('active');
             menuToggle.classList.toggle('active');
+            document.body.classList.toggle('menu-open');
         });
 
         // Close menu when clicking on a link
@@ -37,6 +38,7 @@ document.addEventListener('DOMContentLoaded', function () {
             link.addEventListener('click', function () {
                 navLinks.classList.remove('active');
                 menuToggle.classList.remove('active');
+                document.body.classList.remove('menu-open');
             });
         });
     }
