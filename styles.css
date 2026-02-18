@@ -277,6 +277,10 @@ img {
   background-color: var(--green-light);
 }
 
+.product-type-card.blue {
+  background: #d4f0ff;
+}
+
 .product-type-card.peach {
   background-color: var(--peach-light);
 }
