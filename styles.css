@@ -903,15 +903,10 @@ img {
   overflow: hidden;
 }
 
-.video-poster {
+.promo-video {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 10s ease;
-}
-
-.video-wrapper:hover .video-poster {
-  transform: scale(1.1);
+  border-radius: 16px;
+  display: block;
 }
 
 .video-overlay {
