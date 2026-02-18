@@ -40,38 +40,132 @@
                 <div class="section-header">
                     <span class="section-badge">Nuestros Diseños</span>
                     <h2 class="section-title">Inspiración para tu agenda</h2>
+                    <p class="section-subtitle">Explora nuestras categorías y encuentra el diseño perfecto para ti.</p>
                 </div>
+
+                <!-- Gallery Tabs -->
+                <div class="gallery-tabs">
+                    <button class="gallery-tab active" data-filter="all">Todos</button>
+                    <button class="gallery-tab" data-filter="agenda-b5">Agendas B5</button>
+                    <button class="gallery-tab" data-filter="agenda-a5">Agendas A5</button>
+                    <button class="gallery-tab" data-filter="libretas">Libretas</button>
+                    <button class="gallery-tab" data-filter="etiquetas">Etiquetas</button>
+                </div>
+
                 <div class="gallery-grid">
-                    <div class="gallery-item">
-                        <img src="images/real-product-1.jpg" alt="Agenda Dulces Momentos - Chef">
-                        <div class="gallery-overlay">
-                            <h4 class="gallery-title">Dulces Momentos (Chef)</h4>
-                            <p class="gallery-desc">Personalizada para repostería: Registro de pedidos, recetas e
-                                ingredientes.</p>
+                    <!-- Agendas B5 -->
+                    <div class="product-card gallery-item" data-category="agenda-b5">
+                        <div class="product-image">
+                            <img src="images/agenda-b5.png" alt="Agenda B5 Premium">
+                            <div class="product-overlay">
+                                <button class="product-action-btn">Ver Detalle</button>
+                            </div>
+                        </div>
+                        <div class="product-content">
+                            <span class="product-cat">Agendas B5</span>
+                            <h4 class="product-title">Agenda Docente Completa</h4>
+                            <p class="gallery-desc">Planificación mensual, evaluaciones y asistencia.</p>
+                            <div class="product-price">
+                                $18.000 <span class="product-badge">Best Seller</span>
+                            </div>
                         </div>
                     </div>
-                    <div class="gallery-item">
-                        <img src="images/real-product-2.jpg" alt="Agenda Profe Yéssica">
-                        <div class="gallery-overlay">
-                            <h4 class="gallery-title">Profe Yeca (Docente)</h4>
-                            <p class="gallery-desc">Organización escolar completa: Planificación, evaluaciones y
-                                asistencia.</p>
+
+                    <div class="product-card gallery-item" data-category="agenda-b5">
+                        <div class="product-image">
+                            <img src="images/real-product-1.jpg" alt="Agenda Dulces Momentos">
+                            <div class="product-overlay">
+                                <button class="product-action-btn">Ver Detalle</button>
+                            </div>
+                        </div>
+                        <div class="product-content">
+                            <span class="product-cat">Agendas B5</span>
+                            <h4 class="product-title">Dulces Momentos (Chef)</h4>
+                            <p class="gallery-desc">Personalizada para emprendedores de repostería.</p>
+                            <div class="product-price">$18.000</div>
                         </div>
                     </div>
-                    <div class="gallery-item">
-                        <img src="images/agenda-interior.jpg" alt="Interior de Agenda">
-                        <div class="gallery-overlay">
-                            <h4 class="gallery-title">Diseño Interior</h4>
-                            <p class="gallery-desc">Organización docente premium</p>
+
+                    <div class="product-card gallery-item" data-category="agenda-b5">
+                        <div class="product-image">
+                            <img src="images/real-product-2.jpg" alt="Agenda Profe Yeca">
+                            <div class="product-overlay">
+                                <button class="product-action-btn">Ver Detalle</button>
+                            </div>
+                        </div>
+                        <div class="product-content">
+                            <span class="product-cat">Agendas B5</span>
+                            <h4 class="product-title">Profe Yeca (Docente)</h4>
+                            <p class="gallery-desc">Nuestra edición especial para profesores.</p>
+                            <div class="product-price">$18.000</div>
                         </div>
                     </div>
-                    <div class="gallery-item">
-                        <img src="images/hero-agenda.jpg" alt="Agenda Mundo Juanpi">
-                        <div class="gallery-overlay">
-                            <h4 class="gallery-title">Mundo Juanpi Classic</h4>
-                            <p class="gallery-desc">Elegancia y funcionalidad</p>
+
+                    <!-- Agendas A5 -->
+                    <div class="product-card gallery-item" data-category="agenda-a5">
+                        <div class="product-image">
+                            <img src="images/agenda-a5.png" alt="Agenda A5 Compacta">
+                            <div class="product-overlay">
+                                <button class="product-action-btn">Ver Detalle</button>
+                            </div>
+                        </div>
+                        <div class="product-content">
+                            <span class="product-cat">Agendas A5</span>
+                            <h4 class="product-title">Agenda Diaria Compacta</h4>
+                            <p class="gallery-desc">Ideal para llevar en la cartera o mochila.</p>
+                            <div class="product-price">$14.000</div>
                         </div>
                     </div>
+
+                    <div class="product-card gallery-item" data-category="agenda-a5">
+                        <div class="product-image">
+                            <img src="images/hero-agenda.jpg" alt="Agenda Classic">
+                            <div class="product-overlay">
+                                <button class="product-action-btn">Ver Detalle</button>
+                            </div>
+                        </div>
+                        <div class="product-content">
+                            <span class="product-cat">Agendas A5</span>
+                            <h4 class="product-title">Mundo Juanpi Classic</h4>
+                            <p class="gallery-desc">Diseño elegante y minimalista.</p>
+                            <div class="product-price">$14.000</div>
+                        </div>
+                    </div>
+
+                    <!-- Libretas -->
+                    <div class="product-card gallery-item" data-category="libretas">
+                        <div class="product-image">
+                            <img src="images/libreta-escolar.png" alt="Libreta Escolar">
+                            <div class="product-overlay">
+                                <button class="product-action-btn">Ver Detalle</button>
+                            </div>
+                        </div>
+                        <div class="product-content">
+                            <span class="product-cat">Libretas</span>
+                            <h4 class="product-title">Libreta de Comunicaciones</h4>
+                            <p class="gallery-desc">Tapara dura y hojas personalizadas.</p>
+                            <div class="product-price">
+                                $8.000 <span class="product-badge">Escolar</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Etiquetas (Using placeholder/concept for now) -->
+                    <div class="product-card gallery-item" data-category="etiquetas">
+                        <div class="product-image">
+                            <img src="images/agenda-interior.jpg" alt="Etiquetas Escolares">
+                            <div class="product-overlay">
+                                <button class="product-action-btn">Ver Detalle</button>
+                            </div>
+                        </div>
+                        <div class="product-content">
+                            <span class="product-cat">Etiquetas</span>
+                            <h4 class="product-title">Pack Etiquetas Escolares</h4>
+                            <p class="gallery-desc">Resistentes al agua y personalizadas.</p>
+                            <div class="product-price">$5.000</div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>

@@ -381,6 +381,82 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     // =====================================================
+    // GALLERY FILTERING
+    // =====================================================
+    const galleryTabs = document.querySelectorAll('.gallery-tab');
+
+    if (galleryTabs.length > 0) {
+        const galleryItemsInternal = document.querySelectorAll('.gallery-item');
+
+        // Function to filter items
+        function filterGallery(category) {
+            // Update tabs
+            galleryTabs.forEach(tab => {
+                if (tab.dataset.filter === category) {
+                    tab.classList.add('active');
+                } else {
+                    tab.classList.remove('active');
+                }
+            });
+
+            // Filter items
+            galleryItemsInternal.forEach(item => {
+                const itemCategory = item.dataset.category;
+
+                // Reset animation/transition
+                item.style.transition = 'all 0.4s ease';
+
+                if (category === 'all' || itemCategory === category) {
+                    item.style.display = 'flex';
+                    // Small delay to allow display:flex to apply before opacity
+                    setTimeout(() => {
+                        item.style.opacity = '1';
+                        item.style.transform = 'translateY(0) scale(1)';
+                    }, 10);
+                } else {
+                    item.style.opacity = '0';
+                    item.style.transform = 'translateY(20px) scale(0.95)';
+                    setTimeout(() => {
+                        item.style.display = 'none';
+                    }, 400); // Wait for transition to finish
+                }
+            });
+        }
+
+        // Click handlers
+        galleryTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                const category = tab.dataset.filter;
+                filterGallery(category);
+            });
+        });
+
+        // Check URL params
+        const urlParams = new URLSearchParams(window.location.search);
+        const initialCategory = urlParams.get('category');
+        if (initialCategory) {
+            const targetTab = document.querySelector(`.gallery-tab[data-filter="${initialCategory}"]`);
+            if (targetTab) {
+                // Wait a bit for page load
+                setTimeout(() => {
+                    targetTab.click();
+                    // Scroll to gallery
+                    const gallerySection = document.querySelector('.gallery');
+                    if (gallerySection) {
+                        const headerOffset = 100;
+                        const elementPosition = gallerySection.getBoundingClientRect().top;
+                        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                        window.scrollTo({
+                            top: offsetPosition,
+                            behavior: "smooth"
+                        });
+                    }
+                }, 100);
+            }
+        }
+    }
+
+    // =====================================================
     // PREMIUM WHATSAPP WIDGET LOGIC
     // =====================================================
     const waWidget = document.querySelector('.wa-widget-container');
