@@ -313,14 +313,12 @@ img {
 }
 
 /* Awards & Future Sections */
-.awards,
+/* Awards & Future Sections */
 .future {
   padding: var(--section-padding);
 }
 
-.awards {
-  background: var(--cream-dark);
-}
+
 
 .section-header {
   text-align: center;
@@ -343,14 +341,12 @@ img {
   margin-bottom: 16px;
 }
 
-.awards-grid,
 .future-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 30px;
 }
 
-.award-card,
 .future-item {
   background: var(--white);
   padding: 40px;
@@ -360,13 +356,11 @@ img {
   transition: var(--transition-base);
 }
 
-.award-card:hover,
 .future-item:hover {
   transform: translateY(-10px);
   box-shadow: var(--shadow-lg);
 }
 
-.award-icon,
 .future-icon {
   font-size: 3.5rem;
   margin-bottom: 24px;
