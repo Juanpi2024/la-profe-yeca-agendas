@@ -707,6 +707,8 @@ img {
   align-items: flex-end;
   gap: 15px;
   font-family: var(--font-body);
+  pointer-events: none;
+  /* Fix: Allow clicks through the container */
 }
 
 /* Greeting Bubble */
@@ -863,6 +865,8 @@ img {
   transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   position: relative;
   z-index: 10001;
+  pointer-events: auto;
+  /* Fix: Make button clickable */
 }
 
 .wa-fab:hover {
