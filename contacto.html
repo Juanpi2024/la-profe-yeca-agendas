@@ -38,47 +38,96 @@
     </header>
 
     <main>
-        <section class="contact">
+        <section class="contact-agenda">
             <div class="container">
-                <div class="contact-wrapper">
-                    <div class="contact-info">
-                        <h2>¿Lista para tu agenda personalizada?</h2>
-                        <div class="contact-methods">
-                            <a href="https://wa.me/56975153914" class="contact-method">
-                                <div class="contact-method-icon">💬</div>
-                                <div class="contact-method-text">
-                                    <h4>WhatsApp</h4><span>+56 9 7515 3914</span>
-                                </div>
-                            </a>
-                            <a href="https://instagram.com/mundojuanpi" class="contact-method">
-                                <div class="contact-method-icon">📸</div>
-                                <div class="contact-method-text">
-                                    <h4>Instagram</h4><span>@mundojuanpi</span>
-                                </div>
-                            </a>
-                            <a href="https://www.facebook.com/yeca.toledoalbornoz" class="contact-method">
-                                <div class="contact-method-icon">📘</div>
-                                <div class="contact-method-text">
-                                    <h4>Facebook</h4><span>Mundo Juanpi</span>
-                                </div>
-                            </a>
-                            <a href="https://www.tiktok.com/@yeca0603?_r=1&_t=ZM-92uoE0ohWgN" class="contact-method">
-                                <div class="contact-method-icon">🎵</div>
-                                <div class="contact-method-text">
-                                    <h4>TikTok</h4><span>@yeca0603</span>
-                                </div>
+                <div class="section-header">
+                    <span class="section-badge">Escríbenos</span>
+                    <h2 class="section-title">¿Lista para tu agenda personalizada?</h2>
+                    <p class="section-subtitle">Contáctanos por cualquiera de nuestros canales o llena el formulario</p>
+                </div>
+
+                <!-- Agenda Notebook -->
+                <div class="agenda-notebook">
+                    <!-- Spiral Binding -->
+                    <div class="agenda-spiral">
+                        <span></span><span></span><span></span><span></span><span></span>
+                        <span></span><span></span><span></span><span></span><span></span>
+                    </div>
+
+                    <!-- Left Page: Contact Info -->
+                    <div class="agenda-page agenda-page-left">
+                        <div class="agenda-page-header">
+                            <div class="agenda-date-tag">📅 Contacto</div>
+                            <div class="agenda-page-corner"></div>
+                        </div>
+                        <div class="agenda-entry">
+                            <div class="agenda-entry-bullet" style="--bullet-color: #25D366;">💬</div>
+                            <a href="https://wa.me/56975153914" class="agenda-entry-content" target="_blank"
+                                rel="noopener">
+                                <strong>WhatsApp</strong>
+                                <span>+56 9 7515 3914</span>
+                                <span class="agenda-entry-note">Respuesta inmediata ⚡</span>
                             </a>
                         </div>
+                        <div class="agenda-entry">
+                            <div class="agenda-entry-bullet" style="--bullet-color: #E4405F;">📸</div>
+                            <a href="https://www.instagram.com/yecatoledo?igsh=MWVzd3c0NXE4MXkxcg=="
+                                class="agenda-entry-content" target="_blank" rel="noopener">
+                                <strong>Instagram</strong>
+                                <span>@yecatoledo</span>
+                                <span class="agenda-entry-note">Portfolio y novedades</span>
+                            </a>
+                        </div>
+                        <div class="agenda-entry">
+                            <div class="agenda-entry-bullet" style="--bullet-color: #1877F2;">📘</div>
+                            <a href="https://www.facebook.com/yeca.toledoalbornoz?rdid=MgjC4Ho9OrDyibh7&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1AxknNnoge%2F#"
+                                class="agenda-entry-content" target="_blank" rel="noopener">
+                                <strong>Facebook</strong>
+                                <span>Yeca Toledo</span>
+                                <span class="agenda-entry-note">Comunidad y ofertas</span>
+                            </a>
+                        </div>
+                        <div class="agenda-entry">
+                            <div class="agenda-entry-bullet" style="--bullet-color: #000000;">🎵</div>
+                            <a href="https://www.tiktok.com/@mundojuanpi06?_r=1&_t=ZS-9420pv8pPbc"
+                                class="agenda-entry-content" target="_blank" rel="noopener">
+                                <strong>TikTok</strong>
+                                <span>@mundojuanpi06</span>
+                                <span class="agenda-entry-note">Videos y tutoriales</span>
+                            </a>
+                        </div>
+                        <div class="agenda-doodle">
+                            <span>✨</span>
+                            <span>🌸</span>
+                            <span>📝</span>
+                        </div>
                     </div>
-                    <form class="contact-form">
-                        <div class="form-group"><label>Nombre</label><input type="text" placeholder="Tu nombre completo"
-                                title="Tu nombre completo" required></div>
-                        <div class="form-group"><label>WhatsApp</label><input type="tel" placeholder="+56 9 ..."
-                                title="Tu número de WhatsApp" required></div>
-                        <div class="form-group"><label>Mensaje</label><textarea placeholder="Cuéntanos qué necesitas..."
-                                title="Tu mensaje" required></textarea></div>
-                        <button type="submit" class="form-submit">✨ Solicitar mi Agenda</button>
-                    </form>
+
+                    <!-- Right Page: Form -->
+                    <div class="agenda-page agenda-page-right">
+                        <div class="agenda-page-header">
+                            <div class="agenda-date-tag">📝 Tu Pedido</div>
+                            <div class="agenda-page-corner"></div>
+                        </div>
+                        <form class="agenda-form" id="contactForm">
+                            <div class="agenda-form-line">
+                                <label class="agenda-label">Nombre</label>
+                                <input type="text" class="agenda-input" placeholder="Tu nombre completo" required>
+                            </div>
+                            <div class="agenda-form-line">
+                                <label class="agenda-label">WhatsApp</label>
+                                <input type="tel" class="agenda-input" placeholder="+56 9 ..." required>
+                            </div>
+                            <div class="agenda-form-line agenda-form-line-tall">
+                                <label class="agenda-label">Mensaje</label>
+                                <textarea class="agenda-textarea" placeholder="Cuéntanos qué diseño necesitas..."
+                                    required></textarea>
+                            </div>
+                            <button type="submit" class="agenda-submit">
+                                <span>✨ Solicitar mi Agenda</span>
+                            </button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </section>
@@ -90,11 +139,12 @@
                 <h4>Síguenos</h4>
                 <div class="footer-social">
                     <a href="https://wa.me/56975153914" target="_blank" rel="noopener" title="WhatsApp">💬</a>
-                    <a href="https://instagram.com/mundojuanpi" target="_blank" rel="noopener" title="Instagram">📸</a>
-                    <a href="https://www.facebook.com/yeca.toledoalbornoz" target="_blank" rel="noopener"
-                        title="Facebook">📘</a>
-                    <a href="https://www.tiktok.com/@yeca0603?_r=1&_t=ZM-92uoE0ohWgN" target="_blank" rel="noopener"
-                        title="TikTok">🎵</a>
+                    <a href="https://www.instagram.com/yecatoledo?igsh=MWVzd3c0NXE4MXkxcg==" target="_blank"
+                        rel="noopener" title="Instagram">📸</a>
+                    <a href="https://www.facebook.com/yeca.toledoalbornoz?rdid=MgjC4Ho9OrDyibh7&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1AxknNnoge%2F#"
+                        target="_blank" rel="noopener" title="Facebook">📘</a>
+                    <a href="https://www.tiktok.com/@mundojuanpi06?_r=1&_t=ZS-9420pv8pPbc" target="_blank"
+                        rel="noopener" title="TikTok">🎵</a>
                 </div>
             </div>
             <div class="footer-bottom">
